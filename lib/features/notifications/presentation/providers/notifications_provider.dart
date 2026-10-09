@@ -1,6 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../../core/models/notification.dart';
-import '../../../../core/services/mock_api_service.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 
 // Show unread only filter
