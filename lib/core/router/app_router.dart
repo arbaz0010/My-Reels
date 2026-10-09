@@ -4,37 +4,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../features/auth/presentation/pages/login_page.dart';
 import '../../features/auth/presentation/pages/register_page.dart';
 import '../../features/auth/presentation/providers/auth_provider.dart';
-import '../../features/home/presentation/pages/home_page.dart';
-import '../../features/dashboard/presentation/pages/dashboard_page.dart';
 import '../../features/users/presentation/pages/users_page.dart';
 import '../../features/users/presentation/pages/user_detail_page.dart';
 import '../../features/notifications/presentation/pages/notifications_page.dart';
 import '../../features/settings/presentation/pages/settings_page.dart';
-import '../../features/onboarding/presentation/pages/onboarding_page.dart';
 import '../../features/home/presentation/pages/ui_showcase_page.dart';
 import '../../features/home/presentation/pages/skeleton_showcase_page.dart';
 import '../../features/home/presentation/pages/error_showcase_page.dart';
 import '../../features/home/presentation/pages/file_upload_showcase_page.dart';
 import '../../features/home/presentation/pages/language_showcase_page.dart';
-import '../../features/forms/presentation/pages/forms_example_page.dart';
 import '../../shared/widgets/responsive_scaffold.dart';
-
-final onboardingCompletedProvider = StateProvider<bool>((ref) {
-  // This will be updated when onboarding is completed
-  return false;
-});
-
-final _onboardingInitProvider = FutureProvider<bool>((ref) async {
-  final prefs = await SharedPreferences.getInstance();
-  final completed = prefs.getBool('onboarding_completed') ?? false;
-  
-  // Update the state provider with the loaded value
-  Future.microtask(() {
-    ref.read(onboardingCompletedProvider.notifier).state = completed;
-  });
-  
-  return completed;
-});
 
 final routerProvider = Provider<GoRouter>((ref) {
   final authState = ref.watch(authProvider);
