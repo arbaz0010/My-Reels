@@ -6,7 +6,6 @@ import '../widgets/user_data_table.dart';
 import '../widgets/create_user_dialog.dart';
 import '../../../../shared/widgets/search_bar.dart';
 import '../../../../shared/widgets/skeletons/page_skeletons.dart';
-import '../../../../shared/widgets/guest_mode_banner.dart';
 import '../../../../features/auth/presentation/providers/auth_provider.dart';
 import '../../../../l10n/app_localizations.dart';
 
