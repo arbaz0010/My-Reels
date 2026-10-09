@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/providers/theme_provider.dart';
 import '../../../../core/constants/colors.dart';
 import '../../../../features/auth/presentation/providers/auth_provider.dart';
-import '../../../../shared/widgets/guest_mode_banner.dart';
 import '../../../../l10n/app_localizations.dart';
 
 class SettingsPage extends ConsumerWidget {
